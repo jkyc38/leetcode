@@ -5,8 +5,14 @@ class Solution:
         curSum = 0
 
         for n in nums:
-            if curSum <0: #if the current sum is negative
+            if curSum < 0: #if the current sum is negative
                 curSum = 0 #reset it to 0
+            
+            curSum += n
+
+            maxSub = max(curSum, maxSub)
+
+        return maxSub
 
 
 
