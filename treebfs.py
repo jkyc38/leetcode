@@ -20,7 +20,6 @@ class Solution:
             qLen = len(q)
             level = []
             for i in range(qLen): #loops through the current level cuz qlen keeps track of how many leaves are at the level
-
                 node = q.popleft()
                 level.append(node.val)
 
