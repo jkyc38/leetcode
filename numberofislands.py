@@ -19,12 +19,12 @@ class Solution:
                 
                 for dir1, dir2 in directions:
                     check_row, check_col = row+dir1, col + dir2
-                    if(check_row in range(rows)
+                    if(check_row in range(rows) #error checks to check that the new row and col are in bound of the original grid
                     and check_col in range(cols)
-                    and (check_row,check_col) not in seen
-                    and grid[check_row][check_col]=="1"):
-                        q.append((check_row, check_col))
-                        seen.add((check_row, check_col))
+                    and (check_row,check_col) not in seen #check that the new index row and col are not already in the seen set
+                    and grid[check_row][check_col]=="1"): #and finally check that it is a 1 which means its a connected componenet of the island
+                        q.append((check_row, check_col)) #if it passes all the checks then it is finally appended to the q 
+                        seen.add((check_row, check_col)) #and also adding it to the set
                         
 
         for r in range(rows):
