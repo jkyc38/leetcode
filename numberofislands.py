@@ -1,5 +1,7 @@
 from typing import List
 from collections import deque
+#TODO
+#i still need to finish this
 class Solution:
     def numIslands(self, grid: List[List[str]]) -> int:
         seen = set()
@@ -12,7 +14,6 @@ class Solution:
             while q:
                 row, col = q.popleft()
                 directions = [[1,0], [-1,0], [0,1], [0, -1]]
-                
             pass
 
         for r in range(rows):

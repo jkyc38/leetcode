@@ -26,13 +26,14 @@ class Solution:
         num_list = list(str(num))
         for idx, num in enumerate(num_list):
             #check if larger digit appears later
-            if int(num)<highest_num and hashmap[highest_num]>idx:
-                #swap
-                temp = num
-                num_list[idx] = str(highest_num)
-                high_num_idx = hashmap[highest_num]
-                num_list[high_num_idx] = temp
-                break
+            for j in range(9, int(num), -1):  
+                if int(num)<highest_num and hashmap[highest_num]>idx:
+                    #swap
+                    temp = num
+                    num_list[idx] = str(highest_num)
+                    high_num_idx = hashmap[highest_num]
+                    num_list[high_num_idx] = temp
+                    break
         
         print(num_list)
         return int("".join(num_list))
