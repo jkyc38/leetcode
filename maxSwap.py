@@ -14,6 +14,7 @@ Input: num = 9973
 Output: 9973
 Explanation: No swap.
 """
+
 class Solution:
     def maximumSwap(self, num: int) -> int:
         print(f'input={num}')
@@ -41,8 +42,18 @@ class Solution:
 
 
 
-sol = Solution()
+# sol = Solution()
 
-sol.maximumSwap(num=2736)
+# sol.maximumSwap(num=2736)
 
 
+grades = ["A", "A", "A-", "B-", "B-", "C+", "B", "C", "B+", "B-", "B"]
+hashmap = {"A": 4, "A-": 3.67, "B+":3.33, "B":3, "B-":2.67, "C+":2.33, "C":2}
+
+avg = 0
+
+for grade in grades:
+    grade = grade.upper()
+    avg+=hashmap[grade]
+
+print(avg/len(grades))
